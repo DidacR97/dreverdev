@@ -34,6 +34,12 @@ export const Navbar = () => {
 						<p className="font-bold text-inherit">&lt;DreverDev/&gt;</p>
 					</NextLink>
 				</NavbarBrand>
+			</NavbarContent>
+
+			<NavbarContent
+				className="hidden sm:flex basis-1/5 sm:basis-full"
+				justify="end"
+			>
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
@@ -50,22 +56,7 @@ export const Navbar = () => {
 						</NavbarItem>
 					))}
 				</ul>
-			</NavbarContent>
-
-			<NavbarContent
-				className="hidden sm:flex basis-1/5 sm:basis-full"
-				justify="end"
-			>
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-						<TwitterIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.instagram} aria-label="Instagram">
-						<InstagramIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.linkedIn} aria-label="LinkedIn">
-						<LinkedInIcon className="text-default-500" />
-					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
 			</NavbarContent>
