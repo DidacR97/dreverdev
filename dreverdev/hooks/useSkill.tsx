@@ -4,10 +4,9 @@ import Skill from "@/database/models/Skill";
 
 export const useSkill = () => {
     const getAll = async (): Promise<SkillType[]> => {
-        let experiences: SkillType[] = [];
-        await connection();
-        experiences = await Skill.find({});
-        return experiences;
+        let skills: SkillType[] = [];
+        skills = await Skill.find({});
+        return skills;
     }
 
     return ({

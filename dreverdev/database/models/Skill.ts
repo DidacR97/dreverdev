@@ -8,5 +8,5 @@ const SkillSchema = new Schema({
     image: String,
     type: String,
 });
-
-export default models.Skill || model("Skill", SkillSchema, "skills");
+const Skill = models.Skill || model("Skill", SkillSchema, "skills");
+export default Skill;

@@ -36,7 +36,7 @@ export default function Experience() {
                                     <Image
                                         alt={`${experience.name} logo`}
                                         height={40}
-                                        radius="sm"
+                                        radius="none"
                                         src={`/images/logos/${experience.image}`}
                                         width={40}
                                     />
@@ -56,22 +56,33 @@ export default function Experience() {
 
                                 </CardBody>
                                 {
-                                (experience.skills && experience.skills.length > 0) ? (
-                                    <>
-                                    <Divider />
-                                    <CardFooter>
-                                    {
-                                        experience.skills.map((skill) => (
-                                            <Chip key={skill._id} className="mr-1.5">{skill.name}</Chip>
-                                        ))
-                                    }
-                                </CardFooter>
-                                </>
-                                ) :
-                                (null)
+                                    (experience.skills && experience.skills.length > 0) ? (
+                                        <>
+                                            <Divider />
+                                            <CardFooter>
+                                                {
+                                                    experience.skills.map((skill) => (
+                                                        <Chip key={skill._id} className="mr-1.5">
+                                                            <div className="flex items-center">
+                                                                <Image
+                                                                    alt={`${skill.name} logo`}
+                                                                    radius="none"
+                                                                    height={16}
+                                                                    src={`/images/icons/${skill.image}`}
+                                                                    width={16}
+                                                                />
+                                                                <span className="ml-1.5">{skill.name}</span>
+                                                            </div>
+                                                        </Chip>
+                                                    ))
+                                                }
+                                            </CardFooter>
+                                        </>
+                                    ) :
+                                        (null)
                                 }
-                                
-                                
+
+
                             </Card>
                         </div>
                     ))

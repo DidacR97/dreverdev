@@ -1,5 +1,4 @@
 import {Schema, model, models} from "mongoose";
-import Skill from "@/database/models/Skill";
 
 const ExperienceSchema = new Schema({
     name: String,
@@ -15,7 +14,5 @@ const ExperienceSchema = new Schema({
         ref: "Skill",
     }],
 });
-
-export default models.Experience || model("Experience", ExperienceSchema, "experience");
-// const Experience = models && "Experience" in models ? models.Experience : model("Experience", ExperienceSchema, "experience");
-// export default Experience;
+const Experience = models.Experience || model("Experience", ExperienceSchema, "experience");
+export default Experience;

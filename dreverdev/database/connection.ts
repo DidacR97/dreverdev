@@ -1,6 +1,4 @@
 import mongoose from 'mongoose';
-import Experience from "@/database/models/Experience";
-import Skill from "@/database/models/Skill";
 
 let isConnected = false;
 
