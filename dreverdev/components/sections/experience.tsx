@@ -30,8 +30,8 @@ export default function Experience() {
             <div className="card-container">
                 {experiences.length > 0 ? (
                     experiences.map((experience) => (
-                        <div className="py-4">
-                            <Card key={experience._id} className="">
+                        <div key={experience._id} className="py-4">
+                            <Card className="">
                                 <CardHeader className="flex gap-3">
                                     <Image
                                         alt={`${experience.name} logo`}
