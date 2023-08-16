@@ -1,4 +1,5 @@
 import {Schema, model, models} from "mongoose";
+import Skill from "@/database/models/Skill";
 
 const ExperienceSchema = new Schema({
     name: String,
