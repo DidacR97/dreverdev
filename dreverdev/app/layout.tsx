@@ -6,7 +6,6 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-import { ParticlesBackround } from "@/components/particlesBackground";
 import connection from "@/database/connection";
 
 export const metadata: Metadata = {
