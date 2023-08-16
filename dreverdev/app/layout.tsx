@@ -7,6 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { ParticlesBackround } from "@/components/particlesBackground";
+import connection from "@/database/connection";
 
 export const metadata: Metadata = {
 	title: {
@@ -24,6 +25,8 @@ export const metadata: Metadata = {
 		apple: "/apple-touch-icon.png",
 	},
 };
+
+connection();
 
 export default function RootLayout({
 	children,
