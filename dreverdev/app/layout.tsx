@@ -25,10 +25,6 @@ export const metadata: Metadata = {
 	},
 };
 
-(async () => {
-	await connection();
-})();
-
 export default function RootLayout({
 	children,
 }: {

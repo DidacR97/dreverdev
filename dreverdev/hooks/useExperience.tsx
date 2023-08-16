@@ -1,32 +1,20 @@
-import { ExperienceType, SkillType } from "@/types";
+import { ExperienceType } from "@/types";
 import Experience from "@/database/models/Experience";
 import connection from "@/database/connection";
-import Skill from "@/database/models/Skill";
 
 export const useExperience = () => {
-    const getAll = async (): Promise<ExperienceType[] | Error> => {
-        await connection();
+    const getAll = async () => {
         try {
-            let skills: SkillType[] = await Skill.find({});
-            const experiences: ExperienceType[] | Omit<any, never>[] = await Experience.find({})
-                .populate({ path: 'skills'})
-                .exec();
-            return experiences as ExperienceType[];
+            const response = await fetch('/api/experience/getExperiences');
+            const json = await response.json();
+            return json;
         } catch (error) {
-            console.log(error)
-            return error as Error;
+            console.log(error);
         }
-
     }
 
-    const update = async (id: string, params: object): Promise<ExperienceType | null | Error> => {
-        await connection();
-        try {
-            const experience: ExperienceType | null = await Experience.findOneAndUpdate({ _id: id }, params, { new: true });
-            return experience;
-        } catch (error) {
-            return error as Error;
-        }
+    const update = async() => {
+        
     }
 
     return ({
