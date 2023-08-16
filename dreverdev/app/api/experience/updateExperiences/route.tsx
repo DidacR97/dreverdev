@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server'
-import { useExperience } from "@/hooks/useExperience"
+import { update } from "@/database/controllers/experience";
 
 export async function PUT(request: Request) {
     const req = await request.json();
-    const { update } = useExperience();
-    const experiences = await update(req.id,req.params);
-    return NextResponse.json(experiences);
+    return NextResponse.json(await update(req.id,req.params));
 }
