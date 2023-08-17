@@ -9,8 +9,8 @@ export type ExperienceType = {
   name: string;
   desc_en: string;
   desc_es: string;
-  startDate: string;
-  endDate: string;
+  startDate: number;
+  endDate: number;
   company: string;
   image: string;
   sector: string;

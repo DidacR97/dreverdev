@@ -32,7 +32,7 @@ export default function ExperienceCard({ experience }: { experience: ExperienceT
                 <p>{experience.desc_en}</p>
                 <p>
                     <FontAwesomeIcon className="mr-1.5" icon={faCalendarDays} />
-                    <span>{experience.startDate} - {experience.endDate}</span>
+                    <span>{experience.startDate} - {experience.endDate == 0 ? "present" : experience.endDate}</span>
                 </p>
 
             </CardBody>
