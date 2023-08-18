@@ -1,4 +1,4 @@
-export default function About() {
+export default function Presentation() {
     return (
         <section className="gap-4 py-8 md:py-10 flex flex-col max-w-full">
             <h3 className="mb-4">¡Hola!, soy</h3>

@@ -17,6 +17,18 @@ export type ExperienceType = {
   skills: SkillType[]
 }
 
+export type EducationType = {
+  _id: string;
+  name: string;
+  desc_en: string;
+  desc_es: string;
+  startDate: number;
+  endDate: number;
+  place: string;
+  image: string;
+  skills: SkillType[]
+}
+
 export type SkillType = {
   _id: string;
   name: String,

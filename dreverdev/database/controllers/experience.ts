@@ -9,7 +9,7 @@ export const getAll = async (): Promise<ExperienceType[] | Error> => {
     if(!mongoose.models.Skill)mongoose.models.Skill = Skill;
     try {
         const experiences: ExperienceType[] | Omit<any, never>[] = await Experience.find({})
-            .sort('endDate')
+            .sort('-endDate')
             .populate({ path: 'skills' })
         return experiences as ExperienceType[];
     } catch (error) {
