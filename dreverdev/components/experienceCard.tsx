@@ -1,17 +1,16 @@
 "use client"
 
-import { ExperienceType } from "@/types";
+import { EducationType, ExperienceType } from "@/types";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
-import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardBody, CardFooter, CardHeader, Chip, Divider, Image } from "@nextui-org/react";
 
-export default function ExperienceCard({ experience }: { experience: ExperienceType }) {
+export default function ExperienceCard({ experience }: { experience: ExperienceType | EducationType }) {
     return (
         <Card>
-            <CardHeader className="flex gap-3 flex-wrap">
-                <span className="flex flex-row gap-2">
-                    <div className="w-12 flex justify-center items-center rounded-md">
+            <CardHeader className="flex gap-3 flex-wrap md:justify-between">
+                <span className="flex flex-row gap-2 flex-wrap">
+                    <div className="w-12 justify-center items-center rounded-md hidden md:flex">
                         <Image
                             isBlurred
                             alt={`${experience.name} logo`}
@@ -20,21 +19,17 @@ export default function ExperienceCard({ experience }: { experience: ExperienceT
                             width={48}
                         />
                     </div>
-                    <h3 className="text-lg font-bold">{experience.name}</h3>
+                    <h3 className="text-xl font-bold flex items-center">{experience.name}</h3>
+                    <h4 className="text-lg"> at {'company' in experience ? experience.company : experience.place}</h4>
                 </span>
-                <span className="flex flex-row gap-2">
-                    <div className="w-12 flex justify-center items-center bg-gradient-to-r from-content1 to-transparent rounded-full"><FontAwesomeIcon icon={faLocationPin} style={{ color: "#ea4335" }} /></div>
-                    <h3>{experience.company}</h3>
+                <span className="block">
+                        <span>{experience.startDate} - {experience.endDate == 9999 ? "present" : experience.endDate}</span>
+                        <FontAwesomeIcon className="ml-1.5" icon={faCalendarDays} />
                 </span>
             </CardHeader>
             <Divider />
             <CardBody>
                 <p>{experience.desc_en}</p>
-                <p>
-                    <FontAwesomeIcon className="mr-1.5" icon={faCalendarDays} />
-                    <span>{experience.startDate} - {experience.endDate == 0 ? "present" : experience.endDate}</span>
-                </p>
-
             </CardBody>
             {
                 (experience.skills && experience.skills.length > 0) ? (

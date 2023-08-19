@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { EducationType } from "@/types";
 import { useEducation } from "@/hooks/useEducation";
-import EducationCard from "../educationCard";
+import ExperienceCard from "../experienceCard";
 
 export default function Education() {
 
@@ -23,13 +23,13 @@ export default function Education() {
     }, [])
 
     return (
-        <section className="gap-4 py-8 md:py-10 max-w-full">
+        <section id="education" className="gap-4 py-8 md:py-10 max-w-full">
             <h2 className="text-4xl font-bold text-blue-500 mb-4">Learning and Development</h2>
-            <div className="card-container">
+            <div>
                 {educations.length > 0 ? (
                     educations.map((education) => (
                         <div key={education._id} className="py-4">
-                            <EducationCard education={education}/>
+                            <ExperienceCard experience={education}/>
                         </div>
                     ))
                 ) : (

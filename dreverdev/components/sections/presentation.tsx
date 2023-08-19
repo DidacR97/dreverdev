@@ -1,6 +1,6 @@
 export default function Presentation() {
     return (
-        <section className="gap-4 py-8 md:py-10 flex flex-col max-w-full">
+        <section id="presentation" className="gap-4 py-8 md:py-10 flex flex-col max-w-full">
             <h3 className="mb-4">¡Hola!, soy</h3>
             <h2 className="text-3xl md:text-8xl text-blue-500 flex flex-wrap">Dídac Reverte.</h2>
             <h3 className="text-3xl md:text-8xl mb-4 flex flex-wrap">Construyo soluciones web innovadoras.</h3>
