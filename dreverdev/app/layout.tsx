@@ -6,7 +6,6 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { FloatingIcons } from "@/components/floatingIcons";
-import { DM_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
 	title: {
@@ -25,11 +24,6 @@ export const metadata: Metadata = {
 	},
 };
 
-export const DmMono = DM_Mono({
-	subsets: ['latin'],
-	weight: '400'
-})
-
 export default function RootLayout({
 	children,
 }: {
@@ -43,13 +37,12 @@ export default function RootLayout({
 			<body
 				className={clsx(
 					"min-h-screen bg-background font-sans antialiased",
-					DmMono.className
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
 					<div className="relative flex flex-col h-screen">
 						<Navbar />
-						<main className={`mx-auto max-w-7xl px-6 flex-grow max-w-screen ${DmMono.className}`}>
+						<main className={`mx-auto max-w-7xl px-6 flex-grow max-w-screen`}>
 							{children}
 						</main>
 						<footer className="w-full flex items-center justify-center py-3">
