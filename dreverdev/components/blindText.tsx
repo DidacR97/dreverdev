@@ -15,7 +15,7 @@ export default function BlindText() {
     }, [])
 
     return (
-        <h3 className={`text-7xl`}>
+        <h3 className="text-4xl md:text-8xl">
             <span>I build </span>
             <span id="blindText" className={`transition-colors whitespace-pre text-${words[currentIndex].color}`}>{words[currentIndex].word}</span>
             <div> web applications.</div>
