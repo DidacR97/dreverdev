@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { EducationType } from "@/types";
 import { useEducation } from "@/hooks/useEducation";
 import ExperienceCard from "../experienceCard";
+import { Spinner } from "@nextui-org/react";
 
 export default function Education() {
 
@@ -33,7 +34,7 @@ export default function Education() {
                         </div>
                     ))
                 ) : (
-                    <span>No hay elementos disponibles</span>
+                    <Spinner size="lg" className="Record<wraper, flex justify-center>"/>
                 )}
             </div>
         </section>

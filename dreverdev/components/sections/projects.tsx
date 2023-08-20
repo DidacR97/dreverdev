@@ -23,7 +23,7 @@ export default function Projects() {
     }, [])
 
     return (
-        <section id="projects" className="gap-4 py-8 md:py-10 max-w-full">
+        <section id="projects" className="gap-4 py-8 md:py-10 justify-center max-w-full h-screen">
             <h2 className="text-4xl font-bold text-blue-500 mb-4">Projects Showcase</h2>
             <div className="flex flex-wrap">
             {projects.length > 0 ? (
