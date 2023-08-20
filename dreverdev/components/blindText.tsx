@@ -1,6 +1,5 @@
 "use client";
 
-import { DmMono } from "@/app/layout";
 import { useEffect, useState } from "react";
 
 export default function BlindText() {
@@ -16,7 +15,7 @@ export default function BlindText() {
     }, [])
 
     return (
-        <h3 className={`text-7xl ${DmMono.className}`}>
+        <h3 className={`text-7xl`}>
             <span>I build </span>
             <span id="blindText" className={`transition-colors whitespace-pre text-${words[currentIndex].color}`}>{words[currentIndex].word}</span>
             <div> web applications.</div>
