@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
@@ -50,7 +49,7 @@ export default function RootLayout({
 				<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
 					<div className="relative flex flex-col h-screen">
 						<Navbar />
-						<main className="mx-auto max-w-7xl px-6 flex-grow max-w-screen">
+						<main className={`mx-auto max-w-7xl px-6 flex-grow max-w-screen ${DmMono.className}`}>
 							{children}
 						</main>
 						<footer className="w-full flex items-center justify-center py-3">
