@@ -8,7 +8,7 @@ import { useMail } from "@/hooks/useMail";
 
 export default function ContactModal() {
 
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
     const [email, setEmail] = useState<string>("");
     const [where, setWhere] = useState<string>("");
     const [why, setWhy] = useState<string>("");
@@ -17,7 +17,7 @@ export default function ContactModal() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         sendMail(email,where, why);
-        isOpen;
+        onClose();
     }
     return (
         <>
