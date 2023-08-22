@@ -11,11 +11,7 @@ export const siteConfig = {
 		{
 			label: "Experience",
 			href: "/experience",
-		},
-		{
-			label: "Blog",
-			href: "/blog",
-		},
+		}
 	],
 	links: {
 		linkedIn: "https://www.linkedin.com/in/d%C3%ADdac-reverte-romero-1b59a0161/",
