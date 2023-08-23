@@ -10,7 +10,7 @@ export default function BlindText() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        }, 3000);
+        }, 2000);
         return () => clearInterval(interval);
     }, [])
 
