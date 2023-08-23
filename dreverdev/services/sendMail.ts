@@ -17,10 +17,15 @@ export async function sendMail(email: string, where: string, why: string) {
             subject: `dreverdev contact from - ${email}`,
             text: `email: ${email} - where: ${where} - why: ${why}`,
         };
-
-        await transporter.sendMail(mailOptions);
+        await new Promise((resolve, reject) => {
+            // send mail
+            transporter.sendMail(mailOptions);
+        });
+        // await transporter.sendMail(mailOptions);
         console.log("Email Sent");
         return true;
+
+
     } catch (error) {
         console.error("Error sending email:", error);
         return false;
