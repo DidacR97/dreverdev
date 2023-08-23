@@ -74,6 +74,7 @@ export const Navbar = () => {
 							</Link>
 						</NavbarMenuItem>
 					))}
+					<ContactModal />
 				</div>
 			</NavbarMenu>
 		</NextUINavbar>
