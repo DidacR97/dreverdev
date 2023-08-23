@@ -25,7 +25,7 @@ export default function Experience() {
 
     return (
         <section id="experience" className="gap-4 py-8 md:py-10 max-w-full">
-            <h2 className="text-4xl font-bold text-blue-500 mb-4">Professional Experience</h2>
+            <h2 className="text-4xl text-blue-500 mb-4">PROFESSIONAL EXPERIENCE</h2>
             <div>
                 {experiences.length > 0 ? (
                     experiences.map((experience) => (

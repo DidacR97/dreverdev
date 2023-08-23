@@ -7,6 +7,8 @@ const ProjectSchema = new Schema({
     link: String,
     image: String,
     priority: Number,
+    github: String,
+    blog: String,
 });
 
 export default models.Project || model("Project", ProjectSchema, "projects");

@@ -46,4 +46,6 @@ export type ProjectType = {
   link: string,
   image: string,
   priority: number,
+  github: string,
+  blog: string,
 }

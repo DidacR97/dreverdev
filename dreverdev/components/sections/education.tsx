@@ -25,7 +25,7 @@ export default function Education() {
 
     return (
         <section id="education" className="gap-4 py-8 md:py-10 max-w-full">
-            <h2 className="text-4xl font-bold text-blue-500 mb-4">Learning and Development</h2>
+            <h2 className="text-4xl text-blue-500 mb-4">LEARNING AND DEVELOPMENT</h2>
             <div>
                 {educations.length > 0 ? (
                     educations.map((education) => (
